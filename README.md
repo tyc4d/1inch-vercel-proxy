@@ -1,3 +1,8 @@
+## 1inch Vercel Proxy
+
+- Deployed at https://1inch-vercel-proxy-pi.vercel.app/
+
+```
 # 1inch Vercel Proxy
 
 This is a simple proxy for the 1inch API that can be deployed to a **free** [Vercel](https://vercel.com/) account.
@@ -24,3 +29,4 @@ This proxy will contain your personal Dev Portal API key, so it must be deployed
   - Example: `https://api.1inch.dev/orderbook/v4.0/1/count` becomes `https://my-1inch-vercel-proxy.vercel.app/orderbook/v4.0/1/count`
 
 And that is it! If there are strange response bodies, errors, or something doesn't work right, please open an [Issue](https://github.com/Tanz0rz/1inch-vercel-proxy/issues) here on GitHub.
+```
