@@ -1,4 +1,14 @@
 export default async function handler(req, res) {
+  // 設定 CORS 標頭
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:5173');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  
+  // 處理 OPTIONS 請求（預檢請求）
+  if (req.method === 'OPTIONS') {
+    return res.status(200).end();
+  }
+
   const { API_AUTH_TOKEN } = process.env;
 
   if (!API_AUTH_TOKEN) {
@@ -55,4 +65,4 @@ export default async function handler(req, res) {
     console.error("Error forwarding request:", error);
     return res.status(500).json({ error: "Internal Server Error" });
   }
-}
+} 
